@@ -8,46 +8,35 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
+      headerBackgroundColor={{ light: '#FFC0CB', dark: '#FF69B4' }}
+      // Temporarily remove the headerImage until you have a logo
+      // headerImage={
+      //   <Image
+      //     source={require('@/assets/images/sana-logo.png')}
+      //     style={styles.logo}
+      //   />
+      // }
+      >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title" style={styles.titleText}>Welcome to Sana</ThemedText>
         <HelloWave />
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
+      <ThemedView style={[styles.stepContainer, styles.cardContainer]}>
+        <ThemedText type="subtitle" style={styles.subtitleText}>Risk Assessment</ThemedText>
+        <ThemedText style={styles.contentText}>
+          Use our breast cancer risk assessment tool to understand your personal risk factors and receive personalized recommendations.
         </ThemedText>
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
+      <ThemedView style={[styles.stepContainer, styles.cardContainer]}>
+        <ThemedText type="subtitle" style={styles.subtitleText}>Education Hub</ThemedText>
+        <ThemedText style={styles.contentText}>
+          Visit our Education tab to learn more about breast health, early detection, and prevention strategies.
         </ThemedText>
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+      <ThemedView style={[styles.stepContainer, styles.cardContainer]}>
+        <ThemedText type="subtitle" style={styles.subtitleText}>Your Health Journey</ThemedText>
+        <ThemedText style={styles.contentText}>
+          Sana is here to support you on your health journey. Navigate through the tabs below to access our tools and resources.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -59,16 +48,36 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+    marginBottom: 20,
   },
   stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+    gap: 12,
+    marginBottom: 16,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
+  cardContainer: {
+    backgroundColor: 'rgba(255, 192, 203, 0.1)',
+    padding: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 105, 180, 0.2)',
+  },
+  logo: {
+    height: 200,
+    width: 200,
+    bottom: 20,
+    alignSelf: 'center',
     position: 'absolute',
+    resizeMode: 'contain',
+  },
+  titleText: {
+    color: '#FF1493',
+    fontSize: 28,
+  },
+  subtitleText: {
+    color: '#FF69B4',
+    fontSize: 20,
+  },
+  contentText: {
+    lineHeight: 24,
   },
 });

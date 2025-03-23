@@ -80,11 +80,11 @@ export default function RiskScreen() {
 
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#FFC0CB', dark: '#FF69B4' }}
       headerImage={
         <IconSymbol
           size={260}
-          color="#808080"
+          color="#FF69B4"
           name="cross.case.fill"
           style={styles.headerImage}
         />
@@ -216,32 +216,49 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: 'row',
+    alignItems: 'center',
     gap: 8,
+    marginBottom: 20,
+  },
+  titleText: {
+    color: '#FF1493',
+    fontSize: 28,
+  },
+  cardContainer: {
+    backgroundColor: 'rgba(255, 192, 203, 0.1)',
+    padding: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 105, 180, 0.2)',
+    marginBottom: 16,
   },
   textInput: {
-    borderColor: '#808080',
+    borderColor: '#FF69B4',
     borderWidth: 1,
-    borderRadius: 4,
+    borderRadius: 12,
     padding: 8,
     marginVertical: 8,
+    backgroundColor: 'rgba(255, 192, 203, 0.1)',
   },
   button: {
     alignSelf: 'flex-start',
     marginTop: 16,
     paddingHorizontal: 16,
     paddingVertical: 8,
-    borderRadius: 4,
-    borderColor: '#808080',
-    borderWidth: 1,
+    borderRadius: 12,
+    backgroundColor: '#FF69B4',
   },
   buttonText: {
     fontWeight: '600',
+    color: '#FFFFFF',
   },
   resultText: {
     marginTop: 8,
+    color: '#FF69B4',
+    fontSize: 20,
   },
   errorText: {
-    color: 'red',
+    color: '#FF1493',
     marginTop: 8,
   },
   raceContainer: {
@@ -251,16 +268,16 @@ const styles = StyleSheet.create({
   raceButton: {
     paddingHorizontal: 12,
     paddingVertical: 6,
-    borderRadius: 4,
-    borderColor: '#808080',
+    borderRadius: 12,
+    borderColor: '#FF69B4',
     borderWidth: 1,
     marginRight: 8,
   },
   raceButtonSelected: {
-    backgroundColor: '#808080',
+    backgroundColor: '#FF69B4',
   },
   raceButtonText: {
-    color: '#808080',
+    color: '#FF69B4',
   },
   raceButtonTextSelected: {
     color: '#FFFFFF',
@@ -270,11 +287,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 16,
     padding: 8,
-    borderRadius: 4,
-    borderColor: '#808080',
+    borderRadius: 12,
+    borderColor: '#FF69B4',
     borderWidth: 1,
   },
   checkboxSelected: {
-    backgroundColor: '#808080',
+    backgroundColor: '#FF69B4',
   },
 });
